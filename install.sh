@@ -127,8 +127,10 @@ cat /proc/sys/vm/swappiness
 cat /proc/sys/vm/vfs_cache_pressure
 # 100
 
-#when using zram compression you want to encourage the eagerness to swap to take advantage of memory compression.
+#some ppl say: when using zram compression you want to encourage the eagerness to swap to take advantage of memory compression.
 sudo sysctl vm.swappiness=100
+#or some other say:
+sudo sysctl vm.swappiness=10
 
 # Enable Grub menu
 #first try to use Grub Customier GUI by disable/re-enabeling it
