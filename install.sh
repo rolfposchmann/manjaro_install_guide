@@ -4,7 +4,7 @@
 sudo pacman -S broadcom-wl
 
 #tools
-sudo pacman -S htop neofetchq wireless_tools net-tools
+sudo pacman -S htop neofetchq wireless_tools net-tools gnome-nettool
 
 #creat VLAN
 nm-connection-editor
@@ -26,3 +26,7 @@ swapfc_enabled=1
 cat /proc/sys/vm/swappiness
 cat /proc/sys/vm/vfs_cache_pressure
 sudo sysctl vm.swappiness=10
+
+# Enable Grub menu
+sudo grub-editenv - unset menu_auto_hide
+sudo update-grub
