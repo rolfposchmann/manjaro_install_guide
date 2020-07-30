@@ -71,6 +71,8 @@ Include @home subvol: yes
 Creat a snapshot
 
 ls /run/timeshift/backup
+#timeshift config
+cat /etc/timeshift.json
 
 sudo nano /etc/timeshift-autosnap.conf
 snapshotBoot=false
@@ -91,7 +93,7 @@ export CRYPTUUID=$(blkid -s UUID -o value /dev/mapper/cryptroot)
 echo "UUID=${CRYPTUUID}    /var/cache    btrfs    rw,noatime,compress=zstd:3,ssd,space_cache,commit=120,subvol=@cache 0 0" >> /etc/fstab
 sudo mount -av
 
-#check mounts
+#check mounts, and check if /var/tmp is tmpfs!
 mount | grep tmpfs
 
 # WLAN driver if you forgot
