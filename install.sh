@@ -132,3 +132,6 @@ sudo sysctl vm.swappiness=100
 #first try to use Grub Customier GUI by disable/re-enabeling it
 sudo grub-editenv - unset menu_auto_hide
 sudo update-grub
+
+#install emoji font
+install noto-fonts-emoji
