@@ -1,4 +1,3 @@
-#!/bi
 
 #Base Installation
 #==================
