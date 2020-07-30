@@ -111,13 +111,13 @@ sudo alsactl store|restore
 
 #install zRAM
 sudo pamac install systemd-swap
-sudo systemctl enable systemd-swap.service
 sudo nano /etc/systemd/swap.conf
 
 zswap_enabled=0
 zram_size=$(( RAM_SIZE ))
 swapfc_enabled=1
 
+sudo systemctl enable --now systemd-swap
 
 # Change swappiness for SSD
 cat /proc/sys/vm/swappiness
