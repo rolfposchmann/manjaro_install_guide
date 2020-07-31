@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ssh-keygen -p [-P old_passphrase] [-N new_passphrase] [-f keyfile]
 ssh-keygen -f ~/.ssh/id_rsa -p
 
@@ -21,3 +23,7 @@ Optionen:
 
 #changing comment
 ssh-keygen -c -C "my new comment" -f ~/.ssh/my_ssh_key
+
+#creating pub key
+ssh-keygen -l -f ~/.ssh/id_rsa
+ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
