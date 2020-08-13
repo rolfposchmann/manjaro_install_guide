@@ -139,3 +139,10 @@ sudo update-grub
 
 #install emoji font
 install noto-fonts-emoji
+
+
+#fix network manager bug: https://forum.manjaro.org/t/every-other-reboot-i-have-no-networking-and-a-lot-of-unexpected-error-response-from-getnameowner/144416/10
+systemctl disable org.cups.cupsd.service
+systemctl enable org.cups.cupsd.socket
+
+See https://github.com/systemd/systemd/issues/15316#issuecomment-667658293 2
